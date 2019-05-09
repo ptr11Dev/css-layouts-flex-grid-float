@@ -1,0 +1,98 @@
+/* font-family: 'Nunito', sans-serif; */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: arial, sans-serif;
+}
+
+h1,
+h2 {
+  width: 100%;
+  text-align: center;
+  margin: 1.5%;
+}
+
+.definition,
+.visualization {
+  width: 50vh;
+  flex: 1;
+  height: 80vh;
+}
+
+/* =================================
+definition block - START
+==================================== */
+
+.definition p {
+  font-weight: 900;
+}
+
+.propertiesList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  font-family: "Nunito", sans-serif;
+  font-weight: normal;
+  margin-top: 2em;
+  letter-spacing: 1px;
+}
+.propertie__list {
+  list-style: none;
+}
+
+.propertie__list li {
+  margin-top: 0.4em;
+}
+.propertie__list li:first-child {
+  color: orange;
+  font-weight: bold;
+}
+
+.definition hr {
+  width: 95%;
+  margin: 2em auto;
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px orange inset;
+}
+
+/* =================================
+definition block - END
+==================================== */
+
+/* =================================
+visualization block - START
+==================================== */
+.visualization {
+  background-color: #ddd;
+  display: flex;
+}
+
+.visualization div {
+  min-width: 100px;
+  min-height: 100px;
+  background-color: orange;
+  flex-basis: auto;
+  font-size: 4em;
+  margin: 0.08em;
+  box-shadow: 2px 2px 5px -1px black;
+}
+
+/* =================================
+visualization block - END
+==================================== */
+
+.propertie__name {
+  display: block;
+  font-weight: 900;
+}
