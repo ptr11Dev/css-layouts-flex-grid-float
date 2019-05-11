@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  padding: 10em 0;
+}
+
+main {
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+main div {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+}
+main div a {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
