@@ -20,11 +20,9 @@ h2 {
   text-align: center;
   margin: 1.5%;
 }
-
 .definition,
 .visualization {
-  width: 50vh;
-  flex: 1;
+  min-width: 50%;
   height: 80vh;
 }
 
@@ -73,6 +71,20 @@ definition block - END
 /* =================================
 visualization block - START
 ==================================== */
+.generator {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  background-color: #cbb311;
+  border: none;
+  padding: 0.7em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 1px black;
+}
+.generator:hover {
+  cursor: pointer;
+}
+
 .visualization {
   background-color: #ddd;
   display: flex;
@@ -86,6 +98,10 @@ visualization block - START
   font-size: 4em;
   margin: 0.08em;
   box-shadow: 2px 2px 5px -1px black;
+}
+
+.element p {
+  font-size: 0.3em;
 }
 
 /* =================================

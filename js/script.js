@@ -28,3 +28,26 @@ function universal(dot) {
     }
   }
 }
+
+/* =================================
+elements generator - START
+==================================== */
+const addElement = document.querySelector(".generator");
+
+addElement.addEventListener("click", function() {
+  const el = document.createElement("div");
+  el.classList.add("element");
+  el.innerHTML = `<p>Flex item</p> <button class='delete'>Delete</button>`;
+  visual.appendChild(el);
+});
+
+visual.addEventListener("click", function(e) {
+  if (e.target.classList.contains("delete")) {
+    const element = e.target.parentElement;
+    element.parentElement.removeChild(element);
+  }
+});
+
+/* =================================
+elements generator - START
+==================================== */
