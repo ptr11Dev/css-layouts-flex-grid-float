@@ -37,7 +37,7 @@ const addElement = document.querySelector(".generator");
 addElement.addEventListener("click", function() {
   const el = document.createElement("div");
   el.classList.add("element");
-  el.innerHTML = `<p>Flex item</p> <button class='delete'>Delete</button>`;
+  el.innerHTML = `<p>Flex item</p> <button class='delete'>x</button>`;
   visual.appendChild(el);
 
   if (document.querySelectorAll(".element").length >= 7) {
