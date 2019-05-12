@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flexbox</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,700,900&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/flex.css" />
+  </head>
+  <body>
+    <aside class="home"><a href="index.html">HOME</a></aside>
+    <main>
+      <h1>How does flexbox work?</h1>
+      <button class="generator">Add element</button>
+      <section class="definition">
+        <h2>Properties for parent - flex container</h2>
+        <div class="propertiesList">
+          <div class="propertie">
+            <label class="propertie__name">flex-direction</label>
+            <input
+              type="radio"
+              id="row"
+              value="row"
+              name="flex-direction"
+              checked
+            />
+            <label for="row">row</label><br />
+            <input
+              type="radio"
+              id="row-reverse"
+              value="row-reverse"
+              name="flex-direction"
+            />
+            <label for="row-reverse">row-reverse</label><br />
+            <input
+              type="radio"
+              id="column"
+              value="column"
+              name="flex-direction"
+            />
+            <label for="column">column</label><br />
+            <input
+              type="radio"
+              id="column-reverse"
+              value="column-reverse"
+              name="flex-direction"
+            />
+            <label for="column-reverse">column-reverse</label>
+          </div>
+          <div class="propertie">
+            <label class="propertie__name">flex-wrap</label>
+
+            <input
+              type="radio"
+              id="nowrap"
+              value="nowrap"
+              name="flex-wrap"
+              checked
+            />
+            <label for="nowrap">nowrap</label><br />
+            <input type="radio" id="wrap" value="wrap" name="flex-wrap" />
+            <label for="wrap">wrap</label><br />
+            <input
+              type="radio"
+              id="wrap-reverse"
+              value="wrap-reverse"
+              name="flex-wrap"
+            />
+            <label for="wrap-reverse">wrap-reverse</label>
+          </div>
+          <div class="propertie">
+            <label class="propertie__name">justify-content</label>
+            <input
+              type="radio"
+              id="jc_flex-start"
+              value="flex-start"
+              name="justifyContent"
+              checked
+            />
+            <label for="jc_flex-start">flex-start</label><br />
+            <input
+              type="radio"
+              id="jc_flex-end"
+              value="flex-end"
+              name="justifyContent"
+            />
+            <label for="jc_flex-end">flex-end</label><br />
+            <input
+              type="radio"
+              id="jc_center"
+              value="center"
+              name="justifyContent"
+            />
+            <label for="jc_center">center</label><br />
+            <input
+              type="radio"
+              id="jc_space-between"
+              value="space-between"
+              name="justifyContent"
+            />
+            <label for="jc_space-between">space-between</label><br />
+            <input
+              type="radio"
+              id="jc_space-around"
+              value="space-around"
+              name="justifyContent"
+            />
+            <label for="jc_space-around">space-around</label><br />
+            <input
+              type="radio"
+              id="jc_space-evenly"
+              value="space-evenly"
+              name="justifyContent"
+            />
+            <label for="jc_space-evenly">space-evenly</label>
+          </div>
+          <div class="propertie">
+            <label class="propertie__name">align-items</label>
+            <input
+              type="radio"
+              id="ai_stretch"
+              value="stretch"
+              name="alignItems"
+              checked
+            />
+            <label for="ai_stretch">stretch</label><br />
+            <input
+              type="radio"
+              id="ai_flex-start"
+              value="flex-start"
+              name="alignItems"
+            />
+            <label for="ai_flex-start">flex-start</label><br />
+            <input
+              type="radio"
+              id="ai_flex-end"
+              value="flex-end"
+              name="alignItems"
+            />
+            <label for="ai_flex-end">flex-end</label><br />
+            <input
+              type="radio"
+              id="ai_center"
+              value="center"
+              name="alignItems"
+            />
+            <label for="ai_center">center</label><br />
+            <input
+              type="radio"
+              id="ai_baseline"
+              value="baseline"
+              name="alignItems"
+            />
+            <label for="ai_baseline">baseline</label>
+          </div>
+          <div class="propertie">
+            <label class="propertie__name">align-content</label>
+            <input
+              type="radio"
+              id="ac_stretch"
+              value="stretch"
+              name="alignContent"
+              checked
+            />
+            <label for="ac_stretch">stretch</label><br />
+            <input
+              type="radio"
+              id="ac_flex-start"
+              value="flex-start"
+              name="alignContent"
+            />
+            <label for="ac_flex-start">flex-start</label><br />
+            <input
+              type="radio"
+              id="ac_flex-end"
+              value="flex-end"
+              name="alignContent"
+            />
+            <label for="ac_flex-end">flex-end</label><br />
+            <input
+              type="radio"
+              id="ac_center"
+              value="center"
+              name="alignContent"
+            />
+            <label for="ac_center">center</label><br />
+            <input
+              type="radio"
+              id="ac_space-between"
+              value="space-between"
+              name="alignContent"
+            />
+            <label for="ac_space-between">space-between</label><br />
+            <input
+              type="radio"
+              id="ac_space-around"
+              value="space-around"
+              name="alignContent"
+            />
+            <label for="ac_space-around">space-around</label><br />
+            <input
+              type="radio"
+              id="ac_space-evenly"
+              value="space-evenly"
+              name="alignContent"
+            />
+            <label for="ac_space-evenly">space-evenly</label><br />
+          </div>
+        </div>
+        <p class="default"><span>Underlined</span> properties are default.</p>
+        <hr />
+      </section>
+      <section class="visualization"></section>
+    </main>
+
+    <script src="js/flex.js"></script>
+  </body>
+</html>
