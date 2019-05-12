@@ -22,7 +22,9 @@ h2 {
 }
 .definition,
 .visualization {
-  min-width: 50%;
+  width: 50%;
+}
+.visualization {
   height: 80vh;
 }
 
