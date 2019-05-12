@@ -39,11 +39,11 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-- Important! solve problem with visualization width
-- Update readme
 - Add flexbox properties for flex item
 - Add welcoming page
 - Add grid and float sections
+- Keep readme up to date
+- Reorganize website (possibility of unlimited elements (grow horizontally))
 
 ## Status
 
