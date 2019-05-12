@@ -33,6 +33,7 @@ function universal(dot) {
 elements generator - START
 ==================================== */
 const addElement = document.querySelector(".generator");
+let counter = 1;
 
 addElement.addEventListener("click", function() {
   const el = document.createElement("div");
