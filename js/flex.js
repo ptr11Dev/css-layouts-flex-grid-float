@@ -40,19 +40,12 @@ addElement.addEventListener("click", function() {
   el.classList.add("element");
   el.innerHTML = `<p>Flex item</p> <button class='delete'>x</button>`;
   visual.appendChild(el);
-
-  if (document.querySelectorAll(".element").length >= 7) {
-    addElement.style.display = "none";
-  }
 });
 
 visual.addEventListener("click", function(e) {
   if (e.target.classList.contains("delete")) {
     const element = e.target.parentElement;
     element.parentElement.removeChild(element);
-    if (document.querySelectorAll(".element").length <= 7) {
-      addElement.style.display = "block";
-    }
   }
 });
 

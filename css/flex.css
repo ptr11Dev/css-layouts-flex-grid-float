@@ -8,36 +8,44 @@
   box-sizing: border-box;
 }
 
-main {
-  font-family: arial, sans-serif;
-}
-
 h1,
 h2 {
   width: 100%;
   text-align: center;
-  margin: 1.5%;
+  padding: 1.5%;
 }
 .home {
   position: absolute;
   margin: 1em;
 }
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+
+main {
+  font-family: arial, sans-serif;
+  overflow-x: auto;
+  position: relative;
+  min-height: 80vh;
 }
 
 .definition,
 .definitionSecond {
-  float: left;
-  width: 50%;
+  width: 50vw;
+  position: absolute;
+  left: 0;
+  top: 10vh;
 }
+
+.definitionSecond {
+  top: 50vh;
+}
+
 .visualization {
-  height: 80vh;
-  float: right;
-  width: 50%;
+  height: 65vh;
+  min-width: 50vw;
+  position: absolute;
+  left: 50vw;
+  top: 10vh;
 }
+
 /* =================================
 definition block - START
 ==================================== */
