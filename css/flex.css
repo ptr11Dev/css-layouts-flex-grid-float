@@ -16,7 +16,11 @@ h2 {
 }
 .home {
   position: absolute;
-  margin: 1em;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0.3em;
+  font-size: 3em;
 }
 
 main {
@@ -155,12 +159,10 @@ visualization block - START
 }
 
 .visualization div {
-  min-width: 100px;
+  width: 100px;
   min-height: 100px;
   background-color: orange;
-  flex-basis: auto;
-  font-size: 4em;
-  margin: 0.08em;
+  margin: 0.5em;
   box-shadow: 2px 2px 5px -1px black;
 }
 .element {
@@ -188,20 +190,72 @@ Element - START
   line-height: 18px;
 }
 
-.element p {
-  font-size: 0.2em;
-  margin-top: 0.3em;
+.element p:first-of-type {
+  font-size: 0.9em;
   text-align: center;
+  margin-top: 1.2em;
+  width: 100%;
 }
 
-/* .element .flexOrder {
-  display: inline;
-  padding-left: 1em;
+.element p {
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  width: 50%;
+  position: relative;
+}
+
+.element p input {
+  width: 100%;
+}
+
+.element .orderContainer::after,
+.element .alignSelf::after,
+.element .growContainer::after,
+.element .shrinkContainer::after,
+.element .basisContainer::after {
+  display: block;
+  opacity: 0;
+  transition: 0.3s;
+  position: absolute;
+  background-color: #333;
+  border-radius: 5px;
+  color: white;
+  width: 40px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 0.9em;
   text-align: center;
-  width: 30%;
-  background-color: rgba(255, 99, 71, 0.5);
-  border: none;
-} */
+  right: -82%;
+  top: -10%;
+}
+.element .orderContainer::after {
+  content: "order";
+}
+.element .growContainer::after {
+  content: "grow";
+}
+
+.element .shrinkContainer::after {
+  content: "shrink";
+}
+
+.element .basisContainer::after {
+  content: "basis";
+}
+
+.element .alignSelf::after {
+  content: "align-self";
+  width: 80px;
+  top: 120%;
+}
+
+.element .orderContainer:hover::after,
+.element .growContainer:hover::after,
+.element .shrinkContainer:hover::after,
+.element .basisContainer:hover::after,
+.element .alignSelf:hover::after {
+  opacity: 1;
+}
 
 /* =================================
 Element - END
