@@ -123,5 +123,5 @@ visual.addEventListener("click", function(e) {
 });
 
 /* =================================
-elements generator - START
+elements generator - END
 ==================================== */
