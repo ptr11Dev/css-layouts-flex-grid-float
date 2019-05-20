@@ -160,7 +160,6 @@ visualization block - START
 
 .visualization div {
   width: 100px;
-  min-height: 100px;
   background-color: orange;
   margin: 0.5em;
   box-shadow: 2px 2px 5px -1px black;
@@ -257,6 +256,21 @@ Element - START
 .element .basisContainer:hover::after,
 .element .alignSelf:hover::after {
   opacity: 1;
+}
+
+.visualization .marginBtn {
+  margin-top: -12px;
+  height: 25px;
+  width: 50px;
+}
+.marginBtn .leftBtn,
+.marginBtn .rightBtn {
+  width: 50%;
+  height: 100%;
+}
+.marginBtn .active {
+  background-color: #666;
+  color: white;
 }
 
 /* =================================

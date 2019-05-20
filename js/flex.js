@@ -66,6 +66,36 @@ const setBasis = function() {
 const setASelf = function() {
   this.parentNode.parentNode.style.alignSelf = this.value;
 };
+
+const leftBtn = document.getElementsByClassName("leftBtn");
+let arrayOfLeftBtns = [];
+
+function addLeftMargin() {
+  this.classList.toggle("active");
+  console.log(this.parentElement);
+  this.parentElement.parentElement.style.marginRight = "0.5em";
+
+  if (this.classList.contains("active")) {
+    this.parentElement.parentElement.style.marginLeft = "auto";
+  } else {
+    this.parentElement.parentElement.style.marginLeft = "0.5em";
+  }
+}
+
+const rightBtn = document.getElementsByClassName("rightBtn");
+let arrayOfRightBtns = [];
+
+function addRightMargin() {
+  this.classList.toggle("active");
+  this.parentElement.parentElement.style.marginLeft = "0.5em";
+
+  if (this.classList.contains("active")) {
+    this.parentElement.parentElement.style.marginRight = "auto";
+  } else {
+    this.parentElement.parentElement.style.marginRight = "0.5em";
+  }
+}
+
 /* flex item properties - end */
 
 addElement.addEventListener("click", function() {
@@ -83,6 +113,10 @@ addElement.addEventListener("click", function() {
     <option value="center">center</option>
     <option value="baseline">baseline</option>
 </select></p>
+<div class="marginBtn">
+            <button class="leftBtn">L</button
+            ><button class="rightBtn">R</button>
+          </div>
   <button class='delete'>x</button>`;
   visual.appendChild(el);
   counter++;
@@ -105,6 +139,42 @@ addElement.addEventListener("click", function() {
 
   arrayOfASelf = Array.from(elementsASelf);
   arrayOfASelf.forEach(element => element.addEventListener("input", setASelf));
+
+  /* margin auto feature - start */
+  arrayFromLeftBtns = Array.from(leftBtn);
+  arrayFromLeftBtns.forEach(element =>
+    element.addEventListener("click", addLeftMargin)
+  );
+
+  arrayFromRightBtns = Array.from(rightBtn);
+  arrayFromRightBtns.forEach(element =>
+    element.addEventListener("click", addRightMargin)
+  );
+
+  /*leftBtn.addEventListener("click", function() {
+    this.classList.toggle("active");
+    rightBtn.classList.remove("active");
+    this.parentElement.parentElement.style.marginRight = "0.5em";
+
+    if (this.classList.contains("active")) {
+      this.parentElement.parentElement.style.marginLeft = "auto";
+    } else {
+      this.parentElement.parentElement.style.marginLeft = "0.5em";
+    }
+  });
+  rightBtn.addEventListener("click", function() {
+    this.classList.toggle("active");
+    leftBtn.classList.remove("active");
+    this.parentElement.parentElement.style.marginLeft = "0.5em";
+
+    if (this.classList.contains("active")) {
+      this.parentElement.parentElement.style.marginRight = "auto";
+    } else {
+      this.parentElement.parentElement.style.marginRight = "0.5em";
+    }
+  });*/
+
+  /* margin auto feature - end */
 
   /* flex item properties - end */
 });
