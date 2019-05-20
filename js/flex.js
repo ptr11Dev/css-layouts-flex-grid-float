@@ -74,9 +74,9 @@ function addLeftMargin() {
   this.classList.toggle("active");
 
   if (this.classList.contains("active")) {
-    this.parentElement.parentElement.style.marginLeft = "auto";
+    this.parentElement.parentElement.parentElement.style.marginLeft = "auto";
   } else {
-    this.parentElement.parentElement.style.marginLeft = "0.5em";
+    this.parentElement.parentElement.parentElement.style.marginLeft = "0.5em";
   }
 }
 
@@ -87,9 +87,9 @@ function addRightMargin() {
   this.classList.toggle("active");
 
   if (this.classList.contains("active")) {
-    this.parentElement.parentElement.style.marginRight = "auto";
+    this.parentElement.parentElement.parentElement.style.marginRight = "auto";
   } else {
-    this.parentElement.parentElement.style.marginRight = "0.5em";
+    this.parentElement.parentElement.parentElement.style.marginRight = "0.5em";
   }
 }
 
@@ -100,9 +100,9 @@ function addTopMargin() {
   this.classList.toggle("active");
 
   if (this.classList.contains("active")) {
-    this.parentElement.parentElement.style.marginTop = "auto";
+    this.parentElement.parentElement.parentElement.style.marginTop = "auto";
   } else {
-    this.parentElement.parentElement.style.marginTop = "0.5em";
+    this.parentElement.parentElement.parentElement.style.marginTop = "0.5em";
   }
 }
 
@@ -113,9 +113,9 @@ function addBottomMargin() {
   this.classList.toggle("active");
 
   if (this.classList.contains("active")) {
-    this.parentElement.parentElement.style.marginBottom = "auto";
+    this.parentElement.parentElement.parentElement.style.marginBottom = "auto";
   } else {
-    this.parentElement.parentElement.style.marginBottom = "0.5em";
+    this.parentElement.parentElement.parentElement.style.marginBottom = "0.5em";
   }
 }
 
@@ -136,11 +136,13 @@ addElement.addEventListener("click", function() {
     <option value="center">center</option>
     <option value="baseline">baseline</option>
 </select></p>
+<div class="marginsWrap">
 <div class="marginBtn">
    <button class="leftBtn">L</button><button class="rightBtn">R</button>
 </div>
 <div class="marginBtn">
    <button class="topBtn">T</button><button class="bottomBtn">B</button>
+</div>
 </div>
   <button class='delete'>x</button>`;
   visual.appendChild(el);

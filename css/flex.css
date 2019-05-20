@@ -259,7 +259,6 @@ Element - START
 }
 
 .visualization .marginBtn {
-  margin-left: 20px;
   height: 25px;
   width: 50px;
 }
@@ -270,6 +269,13 @@ Element - START
   width: 50%;
   height: 100%;
 }
+
+.marginsWrap {
+  margin-left: 25px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+}
+
 .marginBtn .active {
   background-color: #666;
   color: white;
