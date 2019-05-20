@@ -39,10 +39,10 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-- Add flexbox tricks to the website (i.e. margin)
 - Add grid and float sections and positions (?)
 - Update welcoming page
 - Restyle it (test with Mgd)
+- Try to optimalize the code (BEM... functions in flex especially)
 - Keep readme up to date
 
 ## Status
