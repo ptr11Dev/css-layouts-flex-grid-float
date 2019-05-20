@@ -72,7 +72,6 @@ let arrayOfLeftBtns = [];
 
 function addLeftMargin() {
   this.classList.toggle("active");
-  console.log(this.parentElement);
 
   if (this.classList.contains("active")) {
     this.parentElement.parentElement.style.marginLeft = "auto";
@@ -94,6 +93,32 @@ function addRightMargin() {
   }
 }
 
+const topBtn = document.getElementsByClassName("topBtn");
+let arrayOfTopBtns = [];
+
+function addTopMargin() {
+  this.classList.toggle("active");
+
+  if (this.classList.contains("active")) {
+    this.parentElement.parentElement.style.marginTop = "auto";
+  } else {
+    this.parentElement.parentElement.style.marginTop = "0.5em";
+  }
+}
+
+const bottomBtn = document.getElementsByClassName("bottomBtn");
+let arrayOfBottomBtns = [];
+
+function addBottomMargin() {
+  this.classList.toggle("active");
+
+  if (this.classList.contains("active")) {
+    this.parentElement.parentElement.style.marginBottom = "auto";
+  } else {
+    this.parentElement.parentElement.style.marginBottom = "0.5em";
+  }
+}
+
 /* flex item properties - end */
 
 addElement.addEventListener("click", function() {
@@ -112,9 +137,11 @@ addElement.addEventListener("click", function() {
     <option value="baseline">baseline</option>
 </select></p>
 <div class="marginBtn">
-            <button class="leftBtn">L</button
-            ><button class="rightBtn">R</button>
-          </div>
+   <button class="leftBtn">L</button><button class="rightBtn">R</button>
+</div>
+<div class="marginBtn">
+   <button class="topBtn">T</button><button class="bottomBtn">B</button>
+</div>
   <button class='delete'>x</button>`;
   visual.appendChild(el);
   counter++;
@@ -149,28 +176,15 @@ addElement.addEventListener("click", function() {
     element.addEventListener("click", addRightMargin)
   );
 
-  /*leftBtn.addEventListener("click", function() {
-    this.classList.toggle("active");
-    rightBtn.classList.remove("active");
-    this.parentElement.parentElement.style.marginRight = "0.5em";
+  arrayFromTopBtns = Array.from(topBtn);
+  arrayFromTopBtns.forEach(element =>
+    element.addEventListener("click", addTopMargin)
+  );
 
-    if (this.classList.contains("active")) {
-      this.parentElement.parentElement.style.marginLeft = "auto";
-    } else {
-      this.parentElement.parentElement.style.marginLeft = "0.5em";
-    }
-  });
-  rightBtn.addEventListener("click", function() {
-    this.classList.toggle("active");
-    leftBtn.classList.remove("active");
-    this.parentElement.parentElement.style.marginLeft = "0.5em";
-
-    if (this.classList.contains("active")) {
-      this.parentElement.parentElement.style.marginRight = "auto";
-    } else {
-      this.parentElement.parentElement.style.marginRight = "0.5em";
-    }
-  });*/
+  arrayFromBottomBtns = Array.from(bottomBtn);
+  arrayFromBottomBtns.forEach(element =>
+    element.addEventListener("click", addBottomMargin)
+  );
 
   /* margin auto feature - end */
 
