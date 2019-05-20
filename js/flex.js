@@ -73,7 +73,6 @@ let arrayOfLeftBtns = [];
 function addLeftMargin() {
   this.classList.toggle("active");
   console.log(this.parentElement);
-  this.parentElement.parentElement.style.marginRight = "0.5em";
 
   if (this.classList.contains("active")) {
     this.parentElement.parentElement.style.marginLeft = "auto";
@@ -87,7 +86,6 @@ let arrayOfRightBtns = [];
 
 function addRightMargin() {
   this.classList.toggle("active");
-  this.parentElement.parentElement.style.marginLeft = "0.5em";
 
   if (this.classList.contains("active")) {
     this.parentElement.parentElement.style.marginRight = "auto";
