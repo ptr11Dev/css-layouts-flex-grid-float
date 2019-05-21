@@ -28,17 +28,69 @@
           <option value="sticky">sticky</option>
         </select>
 
-        <label for="positionTop">Top*:</label>
-        <input id="positionTop" type="text" />
-        <label for="positionRight">Right*:</label>
-        <input id="positionRight" type="text" />
-        <label for="positionBottom">Bottom*:</label>
-        <input id="positionBottom" type="text" />
-        <label for="positionLeft">Left*:</label>
-        <input id="positionLeft" type="text" />
+        <div class="positionTop">
+          <label for="positionTop">Top*:</label>
+          <input id="positionTop" type="number" />
+          <select class="unitSelect">
+            <option value="pt">pt</option>
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+            <option value="%">%</option>
+            <option value="vh">vh</option>
+            <option value="vw">vw</option>
+          </select>
+          <button class="lock"></button>
+        </div>
 
-        <p class="special">
-          * - you can use any of the following unit: px, pt, em, rem, vh, vw, %
+        <div class="positionRight">
+          <label for="positionRight">Right*:</label>
+          <input id="positionRight" type="number" />
+          <select class="unitSelect">
+            <option value="pt">pt</option>
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+            <option value="%">%</option>
+            <option value="vh">vh</option>
+            <option value="vw">vw</option>
+          </select>
+          <button class="lock"></button>
+        </div>
+
+        <div class="positionBottom">
+          <label for="positionBottom">Bottom*:</label>
+          <input id="positionBottom" type="number" />
+          <select class="unitSelect">
+            <option value="pt">pt</option>
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+            <option value="%">%</option>
+            <option value="vh">vh</option>
+            <option value="vw">vw</option>
+          </select>
+          <button class="lock"></button>
+        </div>
+
+        <div class="positionLeft">
+          <label for="positionLeft">Left*:</label>
+          <input id="positionLeft" type="number" />
+          <select class="unitSelect">
+            <option value="pt">pt</option>
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+            <option value="%">%</option>
+            <option value="vh">vh</option>
+            <option value="vw">vw</option>
+          </select>
+          <button class="lock"></button>
+        </div>
+        <p class="warning">
+          Whenever you broke this site don't worry. Refresh it and try to solve
+          your problem again. Keep in mind that this tool add properties in HTML
+          tags (inline styles).
         </p>
       </section>
       <section class="visualization">
@@ -51,5 +103,7 @@
     <aside class="home">
       <a href="index.html"><i class="fas fa-home"></i></a>
     </aside>
+
+    <script src="js/positions.js"></script>
   </body>
 </html>
