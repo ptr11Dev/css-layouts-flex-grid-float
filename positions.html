@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Positions</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/positions.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Positioning - how does it work and how to manage it?</h1>
+    </header>
+    <main>
+      <section class="leftToolbar">
+        <label>Position:</label>
+        <select class="positionSelect">
+          <option value="static">static</option>
+          <option value="relative">relative</option>
+          <option value="absolute">absolute</option>
+          <option value="fixed">fixed</option>
+          <option value="sticky">sticky</option>
+        </select>
+
+        <label for="positionTop">Top*:</label>
+        <input id="positionTop" type="text" />
+        <label for="positionRight">Right*:</label>
+        <input id="positionRight" type="text" />
+        <label for="positionBottom">Bottom*:</label>
+        <input id="positionBottom" type="text" />
+        <label for="positionLeft">Left*:</label>
+        <input id="positionLeft" type="text" />
+
+        <p class="special">
+          * - you can use any of the following unit: px, pt, em, rem, vh, vw, %
+        </p>
+      </section>
+      <section class="visualization">
+        <h2></h2>
+        <div class="container"><div class="child"></div></div>
+      </section>
+      <section class="rightToolbar"></section>
+    </main>
+
+    <aside class="home">
+      <a href="index.html"><i class="fas fa-home"></i></a>
+    </aside>
+  </body>
+</html>

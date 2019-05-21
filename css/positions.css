@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======
+variables - START
+========= */
+
+:root {
+  --radius: 10px;
+  --baseFg: dimgray;
+  --baseBg: black;
+  --accentFg: yellow;
+  --accentBg: black;
+}
+
+/* ======
+variables - END
+========= */
+
+body {
+  font-family: arial, sans-serif;
+}
+
+/* ======
+logo - START
+========= */
+
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0.3em;
+  font-size: 3em;
+}
+
+/* ======
+header - END
+========= */
+
+header h1 {
+  text-align: center;
+  line-height: 12vh;
+}
+
+/* ======
+header - START
+========= */
+
+main {
+  /* margin-top: 4vh; */
+  display: flex;
+  height: 80vh;
+}
+
+/* ======
+toolbars - START
+========= */
+
+.leftToolbar {
+  background-color: #ddd;
+  flex-basis: 20%;
+}
+
+label:first-of-type {
+  margin-top: 4vh;
+}
+
+select {
+  display: block;
+  margin: 10px auto;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--accentFg);
+  outline: 0;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  border-radius: var(--radius);
+  background-color: var(--baseBg);
+
+  /* arrow feature */
+  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(-226deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom,
+    right bottom;
+}
+
+select:hover {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-226deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+}
+
+label {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+}
+input {
+  display: block;
+  margin-top: 10px;
+  width: 30%;
+  margin: 10px auto 0;
+  text-align: center;
+  color: var(--accentFg);
+  outline: 0;
+  border-radius: var(--radius);
+  background-color: var(--baseBg);
+  padding: 0.65em 0 0.55em 0;
+}
+
+input:focus {
+  color: var(--baseBg);
+  background-color: var(--accentFg);
+}
+
+.special {
+  margin: 10% 20px;
+  font-size: 0.8em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.rightToolbar {
+  background-color: green;
+  flex-basis: 20%;
+}
+
+/* ======
+toolbars - END
+========= */
+
+/* ======
+visualization - START
+========= */
+
+.visualization {
+  background-color: red;
+  flex-basis: 60%;
+}
+
+.container {
+  height: 600px;
+  width: 680px;
+  background-color: black;
+  position: relative;
+  top: calc(80vh - 620px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+
+/* ======
+visualization - END
+========= */
