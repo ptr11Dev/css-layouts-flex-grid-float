@@ -14,6 +14,10 @@
 
 ## General info
 
+**Keep in mind that it's Desktop version only.**
+Why is that?
+I've created it to play around with layouts and to practise JavaScript.
+
 If you still have problem with all the possible properties for grid, flexbox and floats - this is the place for you.
 If you don't know why your elements are covered by other elements - this is the place for you.
 If you don't know what the heck is clearfix - this is the place for you.
@@ -39,7 +43,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-- Add grid and float sections and positions (?)
+- Add grid and float sections
 - Update welcoming page
 - Restyle it (test with Mgd)
 - Try to optimalize the code (BEM... functions in flex especially)
@@ -51,7 +55,7 @@ Project is: _in progress_
 
 ## Inspiration
 
-Neverending problem with _align-content_, _align-items_, _justify-content_.
+Neverending problems with _align-content_, _align-items_, _justify-content_.
 
 ## Contact
 
