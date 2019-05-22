@@ -115,7 +115,6 @@
         </p>
       </section>
       <section class="visualization">
-        <h2></h2>
         <div class="container"><div class="child"></div></div>
       </section>
       <section class="rightToolbar">
@@ -135,7 +134,7 @@
               transform: translateY(-50%)
             </li>
             <li>
-              <i class="far fa-dot-circle"></i>
+              <i class="far fa-dot-circle"></i
               ><strong>Only horizontally:</strong> transform: translateX(-50%)
             </li>
           </ul>
@@ -143,28 +142,28 @@
         </div>
         <div class="tip transforms">
           <h3>Basic transformations</h3>
-          <div>
-            <label for="matrix">matrix</label>
-            <input type="number" />
-            <button class="active"></button>
-          </div>
-          <div>
-            <label for="translate">translate</label>
-            <input type="number" />
-            <button></button>
-          </div>
-          <div>
-            <label for="scale">scale</label>
+          <p>
+            Input any number and check how it works. If you want to learn more I
+            encourage you to visit
+            <a href="https://developer.mozilla.org/en-US/">MDN</a>.
+          </p>
+          <div class="translate">
+            <label>translate</label>
             <input type="number" />
             <button></button>
           </div>
-          <div>
-            <label for="rotate">rotate</label>
+          <div class="scale">
+            <label>scale</label>
+            <input type="range" min="0" max="2" step="0.1" />
+            <button></button>
+          </div>
+          <div class="rotate">
+            <label>rotate</label>
             <input type="number" />
             <button></button>
           </div>
-          <div>
-            <label for="skew">skew</label>
+          <div class="skew">
+            <label>skew</label>
             <input type="number" />
             <button></button>
           </div>

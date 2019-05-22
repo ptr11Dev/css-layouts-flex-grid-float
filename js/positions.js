@@ -103,35 +103,78 @@ document.querySelector(".childHeight").addEventListener("input", function() {
 
 
 /* centering - start */
-
+let flag = 0;
 document.querySelector(".tip button").addEventListener("click", function() {
-  childElement.classList.toggle("centerElement");
-  this.classList.toggle("ignore");
+  if (!flag) {
+    childElement.style.transform = "translate(-50%, -50%)";
+    this.classList.toggle("ignore");
+    flag++;
+  } else {
+    flag = 0;
+    childElement.style.transform = "none";
+    this.classList.toggle("ignore");
+  }
 });
 
 /* centering - end */
 
 /* transform properties */
-// CHECK THIS
 
-document.querySelectorAll(".transforms button").forEach(elt =>
-  elt.addEventListener("click", function() {
-    if (!this.innerHTML) {
-      this.innerHTML = "&#10003;";
-      console.log(this.parentElement.childNodes[3].value);
-      console.log(this.parentElement.childNodes[1].textContent);
-      const propertie = `transform:${
-        this.parentElement.childNodes[1].textContent
-      }()`;
-      console.log(propertie);
+// translate
 
-      childElement.style[propertie] =
-        this.parentElement.childNodes[3].value + "deg";
+document
+  .querySelector(".translate button")
+  .addEventListener("click", function() {
+    if (!this.classList.contains("ignore")) {
+      this.classList.toggle("ignore");
+      childElement.style.transform = `translate( ${
+        this.parentElement.childNodes[3].value
+      }%)`;
+      this.parentElement.childNodes[3].classList.toggle("ignore");
+      this.parentElement.childNodes[3].disabled = true;
     } else {
-      this.innerHTML = "";
+      this.parentElement.childNodes[3].disabled = !true;
+      this.parentElement.childNodes[3].classList.toggle("ignore");
+      this.classList.toggle("ignore");
+      childElement.style.transform = "none";
     }
-  })
-);
+  });
+
+// scale
+
+document.querySelector(".scale button").addEventListener("click", function() {
+  if (!this.classList.contains("ignore")) {
+    this.classList.toggle("ignore");
+    childElement.style.transform = `scale( ${
+      this.parentElement.childNodes[3].value
+    })`;
+    this.parentElement.childNodes[3].classList.toggle("ignore");
+    this.parentElement.childNodes[3].disabled = true;
+  } else {
+    this.classList.toggle("ignore");
+    childElement.style.transform = "none";
+    this.parentElement.childNodes[3].classList.toggle("ignore");
+    this.parentElement.childNodes[3].disabled = false;
+  }
+});
+
+// rotate
+
+document.querySelector(".rotate button").addEventListener("click", function() {
+  if (!this.classList.contains("ignore")) {
+    this.classList.toggle("ignore");
+    childElement.style.transform = `rotate(${
+      this.parentElement.childNodes[3].value
+    }deg)`;
+    this.parentElement.childNodes[3].classList.toggle("ignore");
+    this.parentElement.childNodes[3].disabled = true;
+  } else {
+    this.classList.toggle("ignore");
+    childElement.style.transform = "none";
+    this.parentElement.childNodes[3].classList.toggle("ignore");
+    this.parentElement.childNodes[3].disabled = false;
+  }
+});
 
 /* =================================
         Year actualization - Start
