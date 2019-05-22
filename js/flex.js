@@ -209,3 +209,12 @@ visual.addEventListener("click", function(e) {
 /* =================================
 elements generator - END
 ==================================== */
+
+/* =================================
+        Year actualization - Start
+==================================== */
+let date = new Date();
+document.querySelector(".siteFooter p span").textContent = date.getFullYear();
+/* =================================
+        Year actualization - END
+==================================== */

@@ -84,3 +84,28 @@ locks.forEach(lock =>
 );
 
 /* lock option - end */
+
+/* child's size - start */
+const childWidth = document.querySelector(".childWidthValue");
+const childHeight = document.querySelector(".childHeightValue");
+
+document.querySelector(".childWidth").addEventListener("input", function() {
+  childWidth.textContent = this.value;
+  childElement.style.width = this.value + "%";
+});
+
+document.querySelector(".childHeight").addEventListener("input", function() {
+  childHeight.textContent = this.value;
+  childElement.style.height = this.value + "%";
+});
+
+/* child's size - end /*
+
+/* =================================
+        Year actualization - Start
+==================================== */
+let date = new Date();
+document.querySelector(".siteFooter p span").textContent = date.getFullYear();
+/* =================================
+        Year actualization - END
+==================================== */

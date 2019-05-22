@@ -87,7 +87,28 @@
           </select>
           <button class="lock"></button>
         </div>
-        <p class="warning">
+        <div class="childSize">
+          <p>Child's size:</p>
+          <label>Width:</label>
+          <input class="childWidth" type="range" min="0" max="100" value="10" />
+          <span class="childWidthValue">10</span>
+          <br />
+          <label>Height:</label>
+          <input
+            class="childHeight"
+            type="range"
+            min="0"
+            max="100"
+            value="10"
+          />
+          <span class="childHeightValue">10</span>
+        </div>
+        <p class="text">
+          * - checkbox next to propertie name is responsible for locking it. For
+          example if you want to lock top just press it and it'll be
+          automatically set to "auto".
+        </p>
+        <p class="warning text">
           Whenever you broke this site don't worry. Refresh it and try to solve
           your problem again. Keep in mind that this tool add properties in HTML
           tags (inline styles).
@@ -103,6 +124,9 @@
     <aside class="home">
       <a href="index.html"><i class="fas fa-home"></i></a>
     </aside>
+    <footer class="siteFooter">
+      <p>Copyright &copy; <span></span> Piotr Kaczmarek</p>
+    </footer>
 
     <script src="js/positions.js"></script>
   </body>

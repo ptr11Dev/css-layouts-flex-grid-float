@@ -61,8 +61,10 @@ main {
 toolbars - START
 ========= */
 
+/*Left Toolbar - start */
+
 .leftToolbar {
-  background-color: #ddd;
+  /* background-color: #ddd; */
   flex-basis: 20%;
   display: flex;
   flex-direction: column;
@@ -152,19 +154,21 @@ input[type="number"] {
   width: 20px;
   height: 20px;
   line-height: 20px;
-  background-color: #ddd;
   position: absolute;
-  top: 13%;
+  top: 20%;
   left: calc(50% - 4em);
   border: 1px solid black;
   text-align: center;
 }
 
-.warning {
+.text {
   font-size: 0.8em;
   text-align: center;
+  margin: 1.5em 1em 1em 1em;
+}
+
+.warning {
   margin-top: auto;
-  margin-bottom: 1em;
 }
 
 .ignore {
@@ -175,6 +179,37 @@ input[type="number"] {
 .disable {
   background-color: grey;
 }
+
+.childSize {
+  margin-top: 15%;
+}
+.childSize p {
+  text-align: center;
+}
+.childSize label {
+  width: 2em;
+}
+.childSize label,
+.childSize input {
+  display: inline-block;
+  line-height: 2.3em;
+  vertical-align: bottom;
+  margin-left: 3em;
+}
+.childHeightValue,
+.childWidthValue {
+  display: inline-block;
+  margin-left: 1.6em;
+  margin-bottom: 0.4em;
+  padding: 3px;
+  width: 35px;
+  text-align: center;
+  color: var(--accentFg);
+  background-color: var(--accentBg);
+  border-radius: var(--radius);
+}
+
+/*Left Toolbar - end */
 
 .rightToolbar {
   background-color: green;
@@ -205,11 +240,23 @@ visualization - START
 }
 
 .child {
-  min-width: 50px;
-  min-height: 50px;
+  width: 10%;
+  height: 10%;
   background-color: blue;
 }
 
 /* ======
 visualization - END
 ========= */
+
+.siteFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  line-height: 3em;
+  font-size: 1em;
+  text-align: center;
+  background-color: #aaa;
+}
