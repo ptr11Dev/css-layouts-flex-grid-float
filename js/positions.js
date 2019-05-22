@@ -112,6 +112,7 @@ document.querySelector(".tip button").addEventListener("click", function() {
 /* centering - end */
 
 /* transform properties */
+// CHECK THIS
 
 document.querySelectorAll(".transforms button").forEach(elt =>
   elt.addEventListener("click", function() {
