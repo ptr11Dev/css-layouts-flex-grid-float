@@ -111,6 +111,27 @@ document.querySelector(".tip button").addEventListener("click", function() {
 
 /* centering - end */
 
+/* transform properties */
+
+document.querySelectorAll(".transforms button").forEach(elt =>
+  elt.addEventListener("click", function() {
+    if (!this.innerHTML) {
+      this.innerHTML = "&#10003;";
+      console.log(this.parentElement.childNodes[3].value);
+      console.log(this.parentElement.childNodes[1].textContent);
+      const propertie = `transform:${
+        this.parentElement.childNodes[1].textContent
+      }()`;
+      console.log(propertie);
+
+      childElement.style[propertie] =
+        this.parentElement.childNodes[3].value + "deg";
+    } else {
+      this.innerHTML = "";
+    }
+  })
+);
+
 /* =================================
         Year actualization - Start
 ==================================== */

@@ -290,7 +290,12 @@ h3 {
 }
 .transforms button {
   vertical-align: top;
+  font-size: 0.7em;
+  padding: 0;
+  width: 19px;
+  height: 19px;
 }
+
 /* Right Toolbar - end */
 /* ======
 toolbars - END
