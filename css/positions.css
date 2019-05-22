@@ -296,6 +296,54 @@ h3 {
   transform: translateY(7px);
 }
 
+.zIndex {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.first,
+.second,
+.third {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  position: absolute;
+  top: 120%;
+  left: 15%;
+  color: white;
+}
+
+.first {
+  background-color: red;
+}
+.second {
+  background-color: blue;
+  top: 145%;
+  left: 20%;
+}
+.third {
+  background-color: green;
+  top: 155%;
+  left: 8%;
+}
+
+.panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.panel input {
+  width: 20%;
+}
+.panel label {
+  margin: 0;
+}
+
 /* Right Toolbar - end */
 /* ======
 toolbars - END

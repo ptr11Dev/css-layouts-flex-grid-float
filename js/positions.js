@@ -118,7 +118,7 @@ document.querySelector(".tip button").addEventListener("click", function() {
 
 /* centering - end */
 
-/* transform properties */
+/* transform properties -start */
 
 // translate
 
@@ -176,11 +176,46 @@ document.querySelector(".rotate button").addEventListener("click", function() {
   }
 });
 
+// skew
+
+document.querySelector(".skew button").addEventListener("click", function() {
+  if (!this.classList.contains("ignore")) {
+    this.classList.toggle("ignore");
+    childElement.style.transform = `skew(${
+      this.parentElement.childNodes[3].value
+    }deg)`;
+    this.parentElement.childNodes[3].classList.toggle("ignore");
+    this.parentElement.childNodes[3].disabled = true;
+  } else {
+    this.classList.toggle("ignore");
+    childElement.style.transform = "none";
+    this.parentElement.childNodes[3].classList.toggle("ignore");
+    this.parentElement.childNodes[3].disabled = false;
+  }
+});
+
+/* transform properties - end */
+
+/* zindex - start */
+const zIndexDivs = document.querySelectorAll(".zIndex div");
+
+document.querySelector(".zIndexFirst").addEventListener("input", function() {
+  zIndexDivs[1].style.zIndex = this.value;
+});
+document.querySelector(".zIndexSecond").addEventListener("input", function() {
+  zIndexDivs[2].style.zIndex = this.value;
+});
+document.querySelector(".zIndexThird").addEventListener("input", function() {
+  zIndexDivs[3].style.zIndex = this.value;
+});
+
+/* zindex - end */
+
 /* =================================
-        Year actualization - Start
+Year actualization - Start
 ==================================== */
 let date = new Date();
 document.querySelector(".siteFooter p span").textContent = date.getFullYear();
 /* =================================
-        Year actualization - END
+Year actualization - END
 ==================================== */
