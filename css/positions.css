@@ -285,6 +285,7 @@ h3 {
 }
 .transforms div {
   flex-basis: 45%;
+  height: 40px;
 }
 .transforms button {
   vertical-align: middle;
@@ -300,6 +301,7 @@ h3 {
   position: relative;
   top: 0;
   left: 0;
+  height: 20vh;
 }
 
 .first,
@@ -312,7 +314,7 @@ h3 {
   text-align: center;
   line-height: 1.5em;
   position: absolute;
-  top: 120%;
+  top: 45%;
   left: 15%;
   color: white;
 }
@@ -322,18 +324,18 @@ h3 {
 }
 .second {
   background-color: blue;
-  top: 145%;
-  left: 20%;
+  top: 59%;
+  left: 19%;
 }
 .third {
   background-color: green;
-  top: 155%;
-  left: 8%;
+  top: 63%;
+  left: 9%;
 }
 
 .panel {
   position: absolute;
-  top: 100%;
+  top: 40%;
   left: 50%;
 }
 
@@ -358,16 +360,18 @@ visualization - START
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
-  justify-content: center;
+  align-items: center;
 }
 
 .visualization p {
   text-align: center;
-  line-height: 2em;
+  line-height: 1.3em;
+  margin: 0 3em 3em;
 }
 
 .container {
-  flex-basis: 95%;
+  flex-grow: 1;
+  width: 95%;
   background-color: var(--accentBg);
   position: relative;
   margin-top: auto;

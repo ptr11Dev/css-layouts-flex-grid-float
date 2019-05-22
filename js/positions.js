@@ -211,6 +211,15 @@ document.querySelector(".zIndexThird").addEventListener("input", function() {
 
 /* zindex - end */
 
+/* overflow - start */
+
+document.querySelector(".overflowSelect").addEventListener("input", function() {
+  console.log(this.value);
+  document.querySelector(".container").style.overflow = this.value;
+});
+
+/* overflow - end */
+
 /* =================================
 Year actualization - Start
 ==================================== */
