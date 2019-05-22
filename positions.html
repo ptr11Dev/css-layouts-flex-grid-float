@@ -90,8 +90,8 @@
         <div class="childSize">
           <p>Child's size:</p>
           <label>Width:</label>
-          <input class="childWidth" type="range" min="0" max="100" value="10" />
-          <span class="childWidthValue">10</span>
+          <input class="childWidth" type="range" min="0" max="100" />
+          <span class="childWidthValue">auto</span>
           <br />
           <label>Height:</label>
           <input
@@ -104,8 +104,8 @@
           <span class="childHeightValue">10</span>
         </div>
         <p class="text">
-          * - checkbox next to propertie name is responsible for locking it. For
-          example if you want to lock top just press it and it'll be
+          * - checkbox next to a propertie name is responsible for locking it.
+          For example if you want to lock top just press it and it'll be
           automatically set to "auto".
         </p>
         <p class="warning text">
@@ -118,7 +118,68 @@
         <h2></h2>
         <div class="container"><div class="child"></div></div>
       </section>
-      <section class="rightToolbar"></section>
+      <section class="rightToolbar">
+        <h2>Some tips</h2>
+
+        <div class="tip">
+          <h3>Centering</h3>
+          <p>
+            In order to perfectly center your object you can use such trick.
+          </p>
+          <ul>
+            <li>Set position other than static on your element</li>
+            <li>Set top and left properties to 50%</li>
+            <li>Add propertie: transform: translate(-50%, -50%)</li>
+            <li>
+              <i class="far fa-dot-circle"></i><strong>Only vertically:</strong>
+              transform: translateY(-50%)
+            </li>
+            <li>
+              <i class="far fa-dot-circle"></i>
+              ><strong>Only horizontally:</strong> transform: translateX(-50%)
+            </li>
+          </ul>
+          <button>Add transform propety!</button>
+        </div>
+        <div class="tip transforms">
+          <h3>Basic transformations</h3>
+          <div>
+            <label for="matrix">matrix</label>
+            <input type="text" />
+            <button></button>
+          </div>
+          <div>
+            <label for="translate">translate</label>
+            <input type="text" />
+            <button></button>
+          </div>
+          <div>
+            <label for="scale">scale</label>
+            <input type="text" />
+            <button></button>
+          </div>
+          <div>
+            <label for="rotate">rotate</label>
+            <input type="text" />
+            <button></button>
+          </div>
+          <div>
+            <label for="skew">skew</label>
+            <input type="text" />
+            <button></button>
+          </div>
+        </div>
+        <div class="tip">
+          <h3>Z-index</h3>
+          <p>
+            This property sets the "z-order" of an element. Elements with a
+            larger z-index cover those with a smaller one. Try it out!
+          </p>
+          <div class="first"></div>
+          <div class="second"></div>
+          <div class="third"></div>
+        </div>
+      </section>
     </main>
 
     <aside class="home">

@@ -101,6 +101,16 @@ document.querySelector(".childHeight").addEventListener("input", function() {
 
 /* child's size - end /*
 
+
+/* centering - start */
+
+document.querySelector(".tip button").addEventListener("click", function() {
+  childElement.classList.toggle("centerElement");
+  this.classList.toggle("ignore");
+});
+
+/* centering - end */
+
 /* =================================
         Year actualization - Start
 ==================================== */

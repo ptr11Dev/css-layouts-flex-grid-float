@@ -171,7 +171,8 @@ input[type="number"] {
   margin-top: auto;
 }
 
-.ignore {
+.ignore,
+.tip .ignore {
   border: 2px solid black;
   color: white;
   background-color: #333;
@@ -201,8 +202,8 @@ input[type="number"] {
   display: inline-block;
   margin-left: 1.6em;
   margin-bottom: 0.4em;
-  padding: 3px;
-  width: 35px;
+  padding: 3px 3px 2px 2px;
+  width: 38px;
   text-align: center;
   color: var(--accentFg);
   background-color: var(--accentBg);
@@ -211,11 +212,86 @@ input[type="number"] {
 
 /*Left Toolbar - end */
 
+/* Right Toolbar - start */
 .rightToolbar {
-  background-color: green;
+  background-color: #ddd;
   flex-basis: 20%;
 }
+h2 {
+  text-align: center;
+  margin: 2vh 0;
+}
+h3 {
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
+}
 
+.tip p {
+  text-align: center;
+  font-size: 0.9em;
+  margin-bottom: 1vh;
+}
+
+.tip ul li {
+  font-size: 0.9em;
+  margin-bottom: 0.4em;
+  margin-left: 2em;
+  list-style: square;
+}
+
+.tip ul li:nth-of-type(4),
+.tip ul li:nth-of-type(5) {
+  margin-left: 2em;
+  list-style: none;
+}
+.tip i {
+  margin-right: 0.4em;
+}
+
+.tip button {
+  display: block;
+  margin: 1em auto;
+
+  background-color: var(--accentBg);
+  color: var(--accentFg);
+  padding: 6px;
+  border-radius: var(--radius);
+  outline: none;
+  border: red 2px solid;
+}
+.centerElement {
+  transform: translate(-50%, -50%);
+}
+
+.transforms button,
+.tip label,
+.tip input {
+  display: inline;
+}
+
+.tip label {
+  font-size: 0.8em;
+}
+
+.tip input {
+  margin-left: 1em;
+  width: 40%;
+  padding: 2px;
+}
+
+.transforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.transforms div {
+  flex-basis: 45%;
+}
+.transforms button {
+  vertical-align: top;
+}
+/* Right Toolbar - end */
 /* ======
 toolbars - END
 ========= */
@@ -227,6 +303,8 @@ visualization - START
 .visualization {
   background-color: red;
   flex-basis: 60%;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -234,13 +312,10 @@ visualization - START
   width: 680px;
   background-color: black;
   position: relative;
-  top: calc(80vh - 620px);
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: auto;
 }
 
 .child {
-  width: 10%;
   height: 10%;
   background-color: blue;
 }
