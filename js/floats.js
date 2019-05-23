@@ -38,3 +38,26 @@ document.querySelector("footer p span").textContent = date.getFullYear();
 /*==========
 Year actualization - END
 ==========*/
+
+/* clearing floats */
+
+const container = document.querySelector(".parent");
+const clearBtns = document.querySelectorAll(".clear button");
+
+const addEmptyDiv = function() {
+  this.disabled = true;
+  this.classList.add("disabled");
+  const emptyDiv = document.createElement("div");
+  emptyDiv.classList.add("emptyDiv");
+  emptyDiv.style.clear = "both";
+  container.insertBefore(emptyDiv, container.children[2]);
+};
+
+const removeEmptyDiv = function() {
+  clearBtns[0].disabled = false;
+  clearBtns[0].classList.remove("disabled");
+  container.removeChild(document.querySelector(".parent .emptyDiv"));
+};
+
+clearBtns[0].addEventListener("click", addEmptyDiv);
+clearBtns[1].addEventListener("click", removeEmptyDiv);

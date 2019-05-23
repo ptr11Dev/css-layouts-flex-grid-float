@@ -97,6 +97,18 @@ main {
   width: 100px;
   height: 30px;
   cursor: pointer;
+  font-weight: bold;
+  background-image: radial-gradient(
+    43.73px at 52.61% 56.67%,
+    #000000 0%,
+    rgba(255, 255, 255, 0) 160%
+  );
+  color: white;
+}
+
+.clear article .disabled {
+  background-color: red;
+  cursor: not-allowed;
 }
 
 .clearfixMethod span {
@@ -147,11 +159,6 @@ main {
   background-color: blue;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 /* ==========
 main end
 ========== */
@@ -169,3 +176,7 @@ footer {
 /* ==========
 footer end
 ========== */
+
+.parent {
+  background-color: orange;
+}
