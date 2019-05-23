@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Floats</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/floats.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <h1>How to take control on floats?</h1>
+      </header>
+
+      <main>
+        <section class="toolbar">
+          <h2>
+            Set float property for each element separately and check how it
+            works
+          </h2>
+          <div class="firstDivTools">
+            <h3>First element</h3>
+            <button class="left">Left</button>
+            <button class="right">Right</button>
+          </div>
+          <div class="secndDivTools">
+            <h3>Second element</h3>
+            <button class="left">Left</button>
+            <button class="right">Right</button>
+          </div>
+          <div class="clear">
+            <h3>Clearing floats</h3>
+            <article class="emptyDiv">
+              <h4>The empty div method</h4>
+              <p>
+                This method is quite easy - the only thing you have to do in
+                order to clear your floats is adding an empty div element with
+                clear:both; property after the floated one.
+              </p>
+              <button>Execute</button>
+            </article>
+            <article class="overflow">
+              <h4>Overflow method</h4>
+              <p>
+                This method relies on setting the overflow property with a value
+                of hidden or auto on a parent element.
+              </p>
+              <button>Execute</button>
+            </article>
+            <article>
+              <h4>Clearfix method</h4>
+              <p>
+                This is the most commonly used method due to it's clear code.
+                You just have to add clearfix class to a parent element and such
+                css code:
+              </p>
+              <div class="code">
+                ".clearfix::after{content:""; display:table ;clear:both;}
+              </div>
+              <button>Execute</button>
+            </article>
+          </div>
+          <p>
+            You can read more about floats
+            <a href="https://css-tricks.com/almanac/properties/f/float/">here</a
+            >.
+          </p>
+        </section>
+        <section class="visualization">
+          <div class="parent clearfix">
+            <div class="first"></div>
+            <div class="secnd"></div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+              praesentium non fugiat corporis repellendus ducimus, incidunt sunt
+              reiciendis a vero reprehenderit autem ipsum magnam aut hic
+              aspernatur laborum magni illum maxime tenetur adipisci ex? Vel
+              suscipit incidunt ea id sed, ratione praesentium alias esse
+              voluptatum ab illum quaerat pariatur quia. Sequi laboriosam
+              tenetur eveniet blanditiis nemo fugiat reiciendis quisquam rem,
+              suscipit sint distinctio quae rerum saepe dicta doloremque
+              cupiditate assumenda. Reprehenderit, facilis maxime incidunt
+              ducimus ratione, adipisci soluta corrupti nulla amet ipsam
+              similique eaque tempora ut, accusamus vel. Nisi, qui tempora enim
+              laudantium at saepe odio ducimus veritatis nulla dignissimos,
+              aspernatur commodi nobis explicabo voluptates ea, eius dolorum
+              aliquid consectetur! Sit adipisci nulla fugit laborum omnis ipsum
+              at? Laboriosam, consequatur sed in deleniti hic corporis soluta
+              beatae amet fugit asperiores quae id optio facere temporibus
+              nostrum sequi sit quidem voluptas necessitatibus veniam deserunt
+              accusamus eaque. Eligendi inventore error aperiam ab iure beatae
+              nemo illo ex voluptatem exercitationem, asperiores dolor unde,
+              commodi delectus et? Vero, aperiam quae voluptas dolorum culpa
+              ullam iusto nam sequi impedit reiciendis pariatur accusamus,
+              commodi numquam officia. Debitis nobis eum perferendis, laboriosam
+              laudantium id. Enim, minus ex tempore natus incidunt sapiente
+              debitis recusandae hic. Aperiam, hic laboriosam.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Copyright &copy; <span></span> Piotr Kaczmarek</p>
+      </footer>
+    </div>
+
+    <script src="js/floats.js"></script>
+  </body>
+</html>
