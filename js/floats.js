@@ -29,3 +29,12 @@ const addFloat = function() {
 
 firstDivBtns.forEach(button => button.addEventListener("click", addFloat));
 secndDivBtns.forEach(button => button.addEventListener("click", addFloat));
+
+/*==========
+Year actualization - Start
+==========*/
+let date = new Date();
+document.querySelector("footer p span").textContent = date.getFullYear();
+/*==========
+Year actualization - END
+==========*/
