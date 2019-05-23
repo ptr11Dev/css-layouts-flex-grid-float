@@ -15,7 +15,9 @@
 ## General info
 
 **Keep in mind that it's Desktop version only.**
+
 Why is that?
+
 I've created it to play around with layouts and to practise JavaScript.
 
 If you still have problem with all the possible properties for grid, flexbox and floats - this is the place for you.
