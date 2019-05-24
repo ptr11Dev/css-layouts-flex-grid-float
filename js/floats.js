@@ -50,7 +50,7 @@ const addEmptyDiv = function() {
   const emptyDiv = document.createElement("div");
   emptyDiv.classList.add("emptyDiv");
   emptyDiv.style.clear = "both";
-  container.insertBefore(emptyDiv, container.children[2]);
+  container.appendChild(emptyDiv);
 };
 
 const removeEmptyDiv = function() {
@@ -61,3 +61,27 @@ const removeEmptyDiv = function() {
 
 clearBtns[0].addEventListener("click", addEmptyDiv);
 clearBtns[1].addEventListener("click", removeEmptyDiv);
+
+clearBtns[2].addEventListener("click", function() {
+  this.disabled = true;
+  this.classList.add("disabled");
+  container.style.overflow = "hidden";
+});
+
+clearBtns[3].addEventListener("click", function() {
+  clearBtns[2].classList.remove("disabled");
+  container.style.overflow = "visible";
+  clearBtns[2].disabled = false;
+});
+
+clearBtns[4].addEventListener("click", function() {
+  this.classList.add("disabled");
+  container.classList.add("clearfix");
+  this.disabled = true;
+});
+
+clearBtns[5].addEventListener("click", function() {
+  clearBtns[4].disabled = false;
+  clearBtns[4].classList.remove("disabled");
+  container.classList.remove("clearfix");
+});
