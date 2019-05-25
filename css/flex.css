@@ -14,6 +14,14 @@ h2 {
   text-align: center;
   padding: 1.5%;
 }
+h1 {
+  font-size: 2.3em;
+}
+h2 {
+  font-size: 1.8em;
+  margin-top: 1em;
+}
+
 .home {
   position: absolute;
   top: 0;
@@ -21,6 +29,9 @@ h2 {
   z-index: 1;
   margin: 0.3em;
   font-size: 3em;
+}
+.fas {
+  color: #249ddb;
 }
 
 main {
@@ -62,7 +73,7 @@ definition block - START
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-family: "Nunito", sans-serif;
   font-weight: normal;
   margin-top: 2em;
@@ -128,7 +139,7 @@ definition flex item block - START
 .definitionSecond .description {
   padding: 1.4em;
   font-size: 0.9em;
-  text-align: justify;
+  text-align: center;
   line-height: 1.5em;
 }
 
@@ -141,13 +152,16 @@ visualization block - START
 ==================================== */
 .generator {
   position: absolute;
-  top: 3%;
+  top: 4%;
   right: 5%;
-  background-color: #cbb311;
+  background-color: rgba(255, 165, 0, 0.7);
   border: none;
-  padding: 0.7em;
+  width: 160px;
+  height: 42px;
   border-radius: 5px;
-  box-shadow: 2px 2px 7px 1px black;
+  box-shadow: 3px 3px 7px 1px black;
+  font-size: 1em;
+  font-weight: bold;
 }
 .generator:hover {
   cursor: pointer;
@@ -160,7 +174,7 @@ visualization block - START
 
 .visualization .element {
   width: 100px;
-  background-color: orange;
+  background-color: rgba(255, 165, 0, 0.7);
   margin: 0.5em;
   box-shadow: 2px 2px 5px -1px black;
 }
@@ -192,8 +206,9 @@ Element - START
 .element p:first-of-type {
   font-size: 0.9em;
   text-align: center;
-  margin-top: 1.2em;
+  margin-top: 1.3em;
   width: 100%;
+  background-color: white;
 }
 
 .element p {
@@ -290,10 +305,11 @@ Element - END
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3.6em;
-  line-height: 3.6em;
+  height: 2.8em;
+  line-height: 2.8em;
   font-size: 1em;
   text-align: center;
-  background-color: #aaa;
+  background-color: #249ddb;
   font-family: arial, sans-serif;
+  color: white;
 }
