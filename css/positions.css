@@ -39,6 +39,10 @@ logo - START
   font-size: 3em;
 }
 
+.fas {
+  color: #249ddb;
+}
+
 /* ======
 header - END
 ========= */
@@ -391,9 +395,10 @@ visualization - END
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3em;
-  line-height: 3em;
+  height: 2.8em;
+  line-height: 2.8em;
   font-size: 1em;
   text-align: center;
-  background-color: #aaa;
+  background-color: #249ddb;
+  color: white;
 }
