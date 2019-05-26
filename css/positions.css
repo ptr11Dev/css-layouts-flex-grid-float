@@ -77,6 +77,11 @@ label {
   margin-top: 1vh;
 }
 
+.posLabel {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 select {
   display: block;
   margin: 10px auto;
@@ -122,6 +127,7 @@ input {
   border-radius: var(--radius);
   background-color: var(--baseBg);
   padding: 0.65em 0 0.55em 0;
+  border: 1px solid grey;
 }
 
 input:focus {
@@ -168,7 +174,7 @@ input[type="number"] {
 .text {
   font-size: 0.8em;
   text-align: center;
-  margin: 1.5em 1em 1em 1em;
+  margin: 2.5em 1em 1em 1em;
 }
 
 .warning {
@@ -190,6 +196,8 @@ input[type="number"] {
 }
 .childSize p {
   text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 .childSize label {
   width: 2em;
@@ -207,7 +215,7 @@ input[type="number"] {
   margin-left: 1.6em;
   margin-bottom: 0.4em;
   padding: 3px 3px 2px 2px;
-  width: 38px;
+  width: 45px;
   text-align: center;
   color: var(--accentFg);
   background-color: var(--accentBg);
@@ -220,14 +228,23 @@ input[type="number"] {
 .rightToolbar {
   flex-basis: 20%;
 }
+
+.rightToolbar h2 {
+  margin-top: -0.8em;
+  padding-bottom: 0.8em;
+}
+
 h2 {
   text-align: center;
-  margin: 2vh 0;
 }
 h3 {
   text-align: center;
-  margin: 10px 0;
+  margin: 15px 0;
   width: 100%;
+}
+
+.zindex {
+  margin-top: 2em;
 }
 
 .tip p {
@@ -261,7 +278,7 @@ h3 {
   padding: 6px;
   border-radius: var(--radius);
   outline: none;
-  border: red 2px solid;
+  border: goldenrod 2px solid;
 }
 
 .transforms button,
@@ -280,6 +297,7 @@ h3 {
   margin-left: 1em;
   width: 40%;
   padding: 2px;
+  border: 2px solid grey;
 }
 
 .transforms {
@@ -320,19 +338,19 @@ h3 {
   position: absolute;
   top: 45%;
   left: 15%;
-  color: white;
+  color: goldenrod;
 }
 
 .first {
-  background-color: red;
+  background-color: yellow;
 }
 .second {
-  background-color: blue;
+  background-color: grey;
   top: 59%;
   left: 19%;
 }
 .third {
-  background-color: green;
+  background-color: black;
   top: 63%;
   left: 9%;
 }
