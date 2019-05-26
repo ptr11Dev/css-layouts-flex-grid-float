@@ -14,7 +14,7 @@ variables - START
   --radius: 10px;
   --baseFg: dimgray;
   --baseBg: black;
-  --accentFg: yellow;
+  --accentFg: #ffc04c;
   --accentBg: black;
 }
 
@@ -338,11 +338,11 @@ h3 {
   position: absolute;
   top: 45%;
   left: 15%;
-  color: goldenrod;
+  color: white;
 }
 
 .first {
-  background-color: yellow;
+  background-color: var(--accentFg);
 }
 .second {
   background-color: grey;

@@ -48,7 +48,7 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .toolbar h2 {
@@ -56,13 +56,17 @@ main {
   padding-top: 1em;
 }
 
+.divTools h3 {
+  margin-top: 1em;
+}
+
 .left,
 .right {
-  margin: 0.8em 0.5em;
+  margin: 0.3em 0.5em 0 0.5em;
   height: 40px;
   width: 100px;
   font-size: 1em;
-  background-color: #2979ff;
+  background-color: #249ddb;
   border: none;
   box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.5);
   color: white;
@@ -86,6 +90,7 @@ main {
 .clear h3,
 .clear h4 {
   margin-bottom: 0.5em;
+  margin-top: 1em;
 }
 
 .clear article {
@@ -107,7 +112,7 @@ main {
 }
 
 .clear article .disabled {
-  background-color: red;
+  background-color: orangered;
   cursor: not-allowed;
 }
 
@@ -155,10 +160,10 @@ main {
 .parent {
   width: 70vw;
   margin: 0 auto;
-  margin-top: 25vh;
-  background: #d2f5dc;
+  margin-top: 15vh;
+  background: linear-gradient(179.53deg, #2ca2de 0.73%, #ffffff 137.75%);
   border: 2px solid #000000;
-  box-shadow: 27px 27px 20px rgba(0, 0, 0, 0.36);
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.36);
 }
 
 .first,
@@ -168,25 +173,15 @@ main {
 }
 
 .first {
-  background: radial-gradient(
-    508.15px at -36.25% -30.25%,
-    #998a8a 0%,
-    #fdfdfd 51.4%,
-    #000000 100%
-  );
+  background: linear-gradient(180deg, #ffa500 0%, #ffffff 154.75%);
   border: 3px solid #fafafa;
-  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.36);
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.36);
 }
 
 .secnd {
-  background: radial-gradient(
-    600px at -142% 144.75%,
-    #f7e5e5 0%,
-    #efeb8a 48.05%,
-    #56a3fa 100%
-  );
+  background: linear-gradient(180deg, #ffa500 0%, #000000 356.5%);
   border: 3px solid #fafafa;
-  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.36);
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.36);
 }
 
 .clearfix::after {
