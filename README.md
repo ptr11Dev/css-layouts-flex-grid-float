@@ -45,10 +45,13 @@ List of features ready and TODOs for future development
 
 To-do list:
 
+<<<<<<< HEAD
 - Add grid and float sections
+=======
+- Add grid
+>>>>>>> testing
 - Update welcoming page
-- Restyle it (test with Mgd)
-- Try to optimalize the code (BEM... functions in flex especially)
+- Restyle it grid
 - Keep readme up to date
 
 ## Status

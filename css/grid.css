@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  font-family: arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======
+header - START
+========= */
+
+.fas {
+  position: absolute;
+  font-size: 3em;
+  margin: 0.3em;
+  top: 0;
+  left: 0;
+  color: #249ddb;
+}
+
+header h1 {
+  margin: 0.5em 0;
+  line-height: 3.6vh;
+  text-align: center;
+}
+
+/* ======
+header - end
+========= */
+
+/* ==========
+footer start
+========== */
+footer {
+  margin-top: auto;
+  height: 2.8em;
+  line-height: 2.8em;
+  text-align: center;
+  background-color: #249ddb;
+  color: white;
+}
+/* ==========
+footer end
+========== */
