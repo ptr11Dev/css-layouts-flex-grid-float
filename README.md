@@ -45,11 +45,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-<<<<<<< HEAD
-- Add grid and float sections
-=======
 - Add grid
->>>>>>> testing
 - Update welcoming page
 - Restyle it grid
 - Keep readme up to date
