@@ -1,3 +1,14 @@
+:root {
+  --mainFont: white;
+  --subFont: black;
+  --darkerColor: #007ab8;
+  --lighterColor: #249ddb;
+  --darkerColorSpecial: #daa520;
+  --lighterColorSpecial: #ffc14d;
+  --defColor: #645c5c;
+  --radius: 20px;
+}
+
 *,
 *::before,
 *::after {
@@ -34,17 +45,239 @@ header h1 {
 /* ======
 header - end
 ========= */
+.main {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 3vh;
+  justify-content: space-between;
+}
+
+/*to be deleted - start*/
+.visualization {
+  width: 70vw;
+  height: 80vh;
+  border: 2px solid black;
+  align-self: center;
+  margin-right: 3vh;
+}
+/*to be deleted - end*/
+
+/* ======
+toolbar - start
+========= */
+.toolbar {
+  width: 25vw;
+  height: 80vh;
+  border: 2px solid black;
+}
+
+.feature {
+  margin: 10px 0;
+}
+
+.feature__title,
+.basic__title {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: var(--darkerColor);
+  color: var(--mainFont);
+  cursor: pointer;
+}
+
+.basic__title {
+  background-color: var(--darkerColorSpecial);
+  color: var(--subFont);
+  cursor: auto;
+}
+
+.feature__content {
+  display: none;
+  height: 15vh;
+  margin: 0 10px;
+  background-color: var(--lighterColor);
+}
+
+.basic__content {
+  height: 15vh;
+  margin: 0 10px;
+  background-color: var(--lighterColorSpecial);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.basic__content .definition {
+  height: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  flex-basis: 35%;
+  text-align: center;
+  transition: 0.6s;
+
+  background-image: linear-gradient(
+    to right,
+    var(--darkerColor) 50%,
+    var(--lighterColorSpecial) 55%
+  );
+  background-position: bottom;
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+}
+
+.basic__content .definition:hover {
+  background-size: 40px 2px;
+}
+
+/*definition popup - start*/
+
+.container,
+.item,
+.line,
+.cell,
+.track,
+.area,
+.gap {
+  position: absolute;
+  top: 15vh;
+  left: 25vw;
+  width: 180px;
+  height: 160px;
+  background-color: var(--defColor);
+  border-radius: var(--radius);
+  display: none;
+  transition: 0.7s;
+  opacity: 0;
+}
+
+.basic:hover .def {
+  display: block;
+}
+
+.property {
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    var(--darkerColor) 0%,
+    var(--lighterColorSpecial) 110%
+  );
+  color: var(--subFont);
+  padding: 0 2px;
+}
+
+.definition__text,
+.info__text {
+  color: var(--lighterColorSpecial);
+  text-align: center;
+  padding: 20px 10px;
+  line-height: 1.3em;
+}
+
+.basic__content .definition:hover + .container,
+.basic__content .definition:hover + .item,
+.basic__content .definition:hover + .cell,
+.basic__content .definition:hover + .track,
+.basic__content .definition:hover + .area,
+.basic__content .definition:hover + .gap,
+.basic__content .definition:hover + .line {
+  opacity: 1;
+}
+/*definition popup - end*/
+
+/*info + popup - start*/
+
+aside {
+  width: 100%;
+}
+.info {
+  width: 20px;
+  height: 20px;
+  line-height: 22px;
+  margin-left: 5px;
+  text-align: center;
+  background-color: var(--subFont);
+  color: var(--mainFont);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.info__box {
+  position: absolute;
+  transform: translateY(-15%);
+  left: 25vw;
+  width: 160px;
+  height: 160px;
+  background-color: var(--defColor);
+  border-radius: var(--radius);
+  transition: 0.7s;
+  opacity: 0;
+  display: none;
+}
+.info__box h3,
+.info__box p {
+  margin-top: 5px;
+  text-align: center;
+  color: var(--lighterColorSpecial);
+}
+.info__box h3 {
+  margin-top: 10px;
+}
+
+.feature__content:hover .info__box {
+  display: block;
+}
+
+.info:hover + .info__box {
+  opacity: 1;
+}
+
+/*info + popup - end*/
+
+label {
+  color: var(--mainFont);
+  width: 50%;
+  text-align: center;
+}
+input {
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  border-radius: calc(var(--radius) / 2);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  outline-color: var(--lighterColorSpecial);
+}
+
+.info__box .info__paragraph {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.feature__content button {
+  height: 30px;
+  width: 125px;
+  background-color: var(--lighterColorSpecial);
+  box-shadow: 5px 3px 4px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+}
+
+/* ======
+toolbar - end
+========= */
 
 /* ==========
 footer start
 ========== */
 footer {
-  margin-top: auto;
   height: 2.8em;
   line-height: 2.8em;
   text-align: center;
-  background-color: #249ddb;
-  color: white;
+  background-color: var(--lighterColor);
+  color: var(--mainFont);
 }
 /* ==========
 footer end
