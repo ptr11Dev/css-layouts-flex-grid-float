@@ -18,8 +18,16 @@
     <div class="wrapper">
       <header>
         <a href="index.html"><i class="fas fa-home"></i></a>
-        <h1>How to take control on floats?</h1>
+        <h1>How to build grid?</h1>
       </header>
+      <aside class="childsize">
+        <p>Childs' size:</p>
+        <label>Width:</label>
+        <input class="childWidth" type="range" min="0" max="100" />
+        <br />
+        <label>Height:</label>
+        <input class="childHeight" type="range" min="0" max="100" />
+      </aside>
       <main class="main">
         <div class="toolbar">
           <div class="basic">
@@ -103,7 +111,29 @@
           </div>
           <div class="feature">
             <h2 class="feature__title">Name all the cells</h2>
-            <div class="feature__content"></div>
+            <div class="feature__content">
+              <aside>
+                <div class="info">?</div>
+                <div class="info__box">
+                  <p class="info__paragraph">
+                    . (period) - signifies an empty grid cell
+                  </p>
+                  <p>
+                    Remember to enclose each track in quotation marks ('')
+                  </p>
+                </div>
+              </aside>
+              <label for="gridTemplateAreas">grid-template-areas</label>
+
+              <textarea
+                name=""
+                id="gridTemplateAreas"
+                cols="30"
+                rows="6"
+              ></textarea>
+
+              <button>Execute</button>
+            </div>
           </div>
           <div class="feature">
             <h2 class="feature__title">Manage space between cells</h2>
@@ -146,14 +176,24 @@
               </aside>
               <label for="justifyItems">justify-items</label>
               <label for="alignItems">align-items</label>
-              <input id="justifyItems" type="text" />
-              <input id="alignItems" type="text" />
+              <select id="justifyItems">
+                <option value="stretch">stretch</option>
+                <option value="start">start</option>
+                <option value="center">center</option>
+                <option value="end">end</option>
+              </select>
+              <select id="alignItems">
+                <option value="stretch">stretch</option>
+                <option value="start">start</option>
+                <option value="center">center</option>
+                <option value="end">end</option>
+              </select>
               <button>Execute</button>
             </div>
           </div>
           <div class="feature">
             <h2 class="feature__title">Place your grid</h2>
-            <div class="feature__content  active">
+            <div class="feature__content active">
               <aside>
                 <div class="info">?</div>
                 <div class="info__box">
@@ -169,17 +209,71 @@
               </aside>
               <label for="justifyContent">justify-content</label>
               <label for="alignContent">align-content</label>
-              <input id="justifyContent" type="text" />
-              <input id="alignContent" type="text" />
+              <select id="justifyContent">
+                <option value="stretch">stretch</option>
+                <option value="start">start</option>
+                <option value="center">center</option>
+                <option value="end">end</option>
+                <option value="space-around">space-around</option>
+                <option value="space-between">space-between</option>
+                <option value="space-evenly">space-evenly</option>
+              </select>
+              <select id="alignContent">
+                <option value="stretch">stretch</option>
+                <option value="start">start</option>
+                <option value="center">center</option>
+                <option value="end">end</option>
+                <option value="space-around">space-around</option>
+                <option value="space-between">space-between</option>
+                <option value="space-evenly">space-evenly</option>
+              </select>
               <button>Execute</button>
             </div>
           </div>
           <div class="feature">
             <h2 class="feature__title">Implicit grid</h2>
-            <div class="feature__content"></div>
+            <div class="feature__content">
+              <aside>
+                <div class="info">?</div>
+                <div class="info__box">
+                  <h3>Worth knowing</h3>
+                  <p>
+                    auto-placement algorithm
+                  </p>
+                  <p>implicit and explicit grid</p>
+                  <p>
+                    I suggest reading more on css-tricks
+                  </p>
+                </div>
+              </aside>
+              <label for="gridAutoColumns">grid-auto-columns</label>
+              <label for="gridAutoRows">grid-auto-rows</label>
+              <label for="gridAutoFlow">grid-auto-flow</label>
+              <input id="gridAutoColumns" type="text" />
+              <input id="gridAutoRows" type="text" />
+              <input id="gridAutoFlow" type="text" />
+              <button>Execute</button>
+              <p class="read">
+                Read more about grid
+                <a
+                  href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+                  >here</a
+                >.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="visualization"></div>
+        <div class="visualization">
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+          <div class="gitem"><div class="gelement"></div></div>
+        </div>
       </main>
       <footer>
         <p>Copyright &copy; <span></span> Piotr Kaczmarek</p>
