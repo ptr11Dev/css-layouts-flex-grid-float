@@ -3,10 +3,6 @@
   --subFont: black;
   --darkerColor: #007ab8;
   --lighterColor: #249ddb;
-  --darkerColorSpecial: #daa520;
-  --lighterColorSpecial: #ffc14d;
-  --defColor: #645c5c;
-  --radius: 20px;
 }
 
 *,
@@ -56,7 +52,7 @@ main start
   height: 30vh;
   opacity: 0;
   transition: 0.7s;
-  background-color: white;
+  background-color: var(--mainFont);
 }
 
 .active {
@@ -88,7 +84,7 @@ main div a {
   border: 1px solid black;
   text-align: center;
   line-height: 20vh;
-  color: white;
+  color: var(--mainFont);
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1.8em;
