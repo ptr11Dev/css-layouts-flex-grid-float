@@ -8,12 +8,82 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <h1>Main title</h1>
-    <main>
-      <div><a href="flex.html">FLEXBOX</a></div>
-      <div><a href="positions.html">POSITIONS</a></div>
-      <div><a href="floats.html">FLOATS</a></div>
-      <div><a href="grid.html">GRID</a></div>
-    </main>
+    <div class="wrapper">
+      <header>
+        <h1>CSS Layouts</h1>
+      </header>
+      <article class="text shown active">
+        <p>
+          <span>Which layout method is the best?</span> I'm pretty sure the one
+          that requires the least amount of lines in css to achieve your goal.
+          In my opinion there’s a place for all the layout methods, and they can
+          and should be combined where necessary. When creating a custom
+          HTML/CSS website, I recommend using grid to layout your site, float to
+          add that image to your blog post, and flex to get that tiny pop-up UI
+          element looking fantastic!
+        </p>
+      </article>
+      <article class="text hidden">
+        <p>
+          <span>Floats</span> are a great way to set an image within a larger
+          text article. However, it’s not a very practical way to set up an
+          entire web page layout. If you’re not careful, it can get buggy pretty
+          quickly, and it’s a little bit of a mess trying to clean it up. This
+          layout method just doesn’t have as many built-in properties as Grid or
+          Flex and cannot create complex layouts. It's very important to
+          remember that using float will take out the element of the normal
+          document flow.
+        </p>
+      </article>
+      <article class="text hidden">
+        <p>
+          The <span>position</span> property specifies the type of positioning
+          methods used for an element. Element with this property are positioned
+          using the top, left, bottom and right properties. However, these
+          properties will not work unless the <span>position</span> property is
+          set first. They also work differently depending on the position value.
+          As well as float property this one takes out the element our of the
+          normal document flow.
+        </p>
+      </article>
+      <article class="text hidden">
+        <p>
+          <span>Flexbox</span> is a great tool to let smaller UI elements look
+          their best on any device. Unfortunately if you want to layout larger
+          elements on the page, you would probably want to add margins and then
+          do a little math to make sure it looks the way you want it to look.
+          That can take time. In addition, each section of your design must be a
+          row with a separate flex tag on it. This rules out using flex for more
+          complexly designed grid systems. However, it is actually because of
+          the separate tagging that flex is seen in many frameworks and design
+          systems.
+        </p>
+      </article>
+      <article class="text hidden">
+        <p>
+          <span>CSS Grid Layout</span> is a 2-dimensional system, meaning it can
+          handle both columns and rows. You work with Grid Layout by applying
+          CSS rules both to a parent element (which becomes the Grid Container)
+          and to that element's children (which become Grid Items). With grid,
+          it’s easy to set up an entire layout design system for your website.
+          On a macro scale, you’ll have your styling up and running in no time.
+          Layouts may be nested within other layouts and grid also allows you to
+          create extremely complex arrangements with precision. Although, it
+          isn’t best for quick centering or placing an image within a larger
+          text article. These types of layouts are best handled through other
+          methods.
+        </p>
+      </article>
+      <main>
+        <div class="box"><a href="floats.html">Float</a></div>
+        <div class="box"><a href="positions.html">Position</a></div>
+        <div class="box"><a href="flex.html">Flexbox</a></div>
+        <div class="box"><a href="grid.html">Grid</a></div>
+      </main>
+      <footer>
+        <p>Copyright &copy; <span></span> Piotr Kaczmarek</p>
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

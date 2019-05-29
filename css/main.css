@@ -1,29 +1,143 @@
-* {
-  padding: 0;
-  margin: 0;
+:root {
+  --mainFont: white;
+  --subFont: black;
+  --darkerColor: #007ab8;
+  --lighterColor: #249ddb;
+  --darkerColorSpecial: #daa520;
+  --lighterColorSpecial: #ffc14d;
+  --defColor: #645c5c;
+  --radius: 20px;
 }
 
-h1 {
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  font-family: arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* ======
+header - START
+========= */
+
+header h1 {
+  margin: 2em 0 0 0;
+  line-height: 3.6vh;
   text-align: center;
-  padding: 10em 0;
+  font-size: 2.8em;
+}
+
+/* ======
+header - end
+========= */
+
+/* ==========
+main start
+========== */
+
+/*toggling text start*/
+.shown {
+  height: 30vh;
+}
+
+.hidden {
+  position: absolute;
+  top: calc(22vh);
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  opacity: 0;
+  transition: 0.7s;
+  background-color: white;
+}
+
+.active {
+  opacity: 1;
+}
+/*toggling text end*/
+/*text*/
+.text p {
+  font-size: 1.4em;
+  text-align: justify;
+  text-indent: 2em;
+  margin: 3em;
+  line-height: 1.5em;
+}
+.text span {
+  font-weight: bold;
 }
 
 main {
-  width: 80vw;
   display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
+  justify-content: space-around;
 }
 
-main div {
-  height: 200px;
-  width: 200px;
-  border: 2px solid black;
-}
+main div,
 main div a {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 20vw;
+  height: 25vh;
+  border: 1px solid black;
   text-align: center;
-  line-height: 200px;
+  line-height: 20vh;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
+
+main div:hover {
+  transform: scale(1.1);
+}
+
+/*backgrounds*/
+
+main div:nth-of-type(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("../img/flexbox.png");
+}
+
+main div:nth-of-type(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("../img/position.png");
+}
+
+main div:nth-of-type(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("../img/floats.png");
+}
+
+main div:last-of-type {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("../img/grid.png");
+}
+
+/* ======
+main - end
+========= */
+
+/* ==========
+footer start
+========== */
+footer {
+  height: 2.8em;
+  line-height: 2.8em;
+  text-align: center;
+  background-color: var(--lighterColor);
+  color: var(--mainFont);
+}
+/* ==========
+footer end
+========== */
