@@ -42,7 +42,7 @@ const createGrid = function() {
     console.log("co się dzieje gdy nie ma repeat w kolumnach??");
   }
 
-  /*check if there is reapeat used in columns*/
+  /*check if there is reapeat used in rows*/
   if (gtRows.value.slice(0, 6) == "repeat") {
     noRows = gtRows.value.slice(
       gtRows.value.indexOf("(") + 1,
@@ -55,7 +55,7 @@ const createGrid = function() {
 
   let totCells = noCols * noRows;
 
-  /*remove all existing elements in container*/
+  /*remove all existing elements in the container*/
   if (gridPlace.children.length !== 0) {
     const gridPlaceLen = gridPlace.children.length;
     for (let i = 0; i < gridPlaceLen; i++) {
@@ -117,6 +117,20 @@ const placeContent = function() {
   gridPlace.style.alignContent = aligContent.value;
 };
 btns[4].addEventListener("click", placeContent);
+
+/*Implicit grid management*/
+const gaCol = document.querySelector("#gridAutoColumns");
+const gaRow = document.querySelector("#gridAutoRows");
+const gaFlow = document.querySelector("#gridAutoFlow");
+const implicitGrid = function() {
+  gridPlace.style.gridAutoColumns = gaCol.value;
+  console.log(gaCol.value);
+  gridPlace.style.gridAutoRows = gaRow.value;
+  console.log(gaRow.value);
+  gridPlace.style.gridAutoFlow = gaFlow.value;
+  console.log(gaFlow.value);
+};
+btns[5].addEventListener("click", implicitGrid);
 
 /*childs' size*/
 const childW = document.querySelector(".childWidth");

@@ -47,10 +47,13 @@ List of features ready and TODOs for future development
 - Used flexbox properties
 - Used grid properties
 - Used float tricks
+- Used position basic properties
 
 To-do list:
 
 - Validate more values in "build your grid"
+- Fix "grid-template-areas"
+- Add grid items' properties
 - Update welcoming page
 - Keep readme up to date
 

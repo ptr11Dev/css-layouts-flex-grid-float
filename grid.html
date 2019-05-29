@@ -110,7 +110,7 @@
             </div>
           </div>
           <div class="feature">
-            <h2 class="feature__title">Name all the cells</h2>
+            <h2 class="feature__title">Name the cells</h2>
             <div class="feature__content">
               <aside>
                 <div class="info">?</div>
@@ -159,7 +159,7 @@
             </div>
           </div>
           <div class="feature">
-            <h2 class="feature__title">Manage cells' place</h2>
+            <h2 class="feature__title">Manage items' place</h2>
             <div class="feature__content">
               <aside>
                 <div class="info">?</div>
@@ -193,7 +193,7 @@
           </div>
           <div class="feature">
             <h2 class="feature__title">Place your grid</h2>
-            <div class="feature__content active">
+            <div class="feature__content">
               <aside>
                 <div class="info">?</div>
                 <div class="info__box">
@@ -251,7 +251,12 @@
               <label for="gridAutoFlow">grid-auto-flow</label>
               <input id="gridAutoColumns" type="text" />
               <input id="gridAutoRows" type="text" />
-              <input id="gridAutoFlow" type="text" />
+              <select id="gridAutoFlow">
+                <option value="row">row</option>
+                <option value="column">column</option>
+                <option value="row dense">row dense</option>
+                <option value="column dense">column dense</option>
+              </select>
               <button>Execute</button>
               <p class="read">
                 Read more about grid
@@ -263,17 +268,7 @@
             </div>
           </div>
         </div>
-        <div class="visualization">
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-          <div class="gitem"><div class="gelement"></div></div>
-        </div>
+        <div class="visualization"></div>
       </main>
       <footer>
         <p>Copyright &copy; <span></span> Piotr Kaczmarek</p>

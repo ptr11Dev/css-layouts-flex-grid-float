@@ -312,6 +312,9 @@ textarea {
   padding: 0 4px;
 }
 
+.feature:last-of-type .feature__content select {
+  margin-top: -10px;
+}
 /* ======
 toolbar - end
 ========= */
@@ -363,17 +366,19 @@ footer end
 visualization start
 ========== */
 
-/*to be deleted - start*/
 .visualization {
   width: 70vw;
   border: 2px solid black;
   margin-right: 3vh;
   display: grid;
+}
+
+/*to be deleted - start*/
+.visualization {
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
-  /* justify-content: space-between; */
-}
-/*to be deleted - end*/
+  grid-auto-columns: 250px;
+} /*to be deleted - end*/
 
 .gitem {
   display: grid;
