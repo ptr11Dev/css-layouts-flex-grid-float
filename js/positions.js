@@ -127,9 +127,7 @@ document
   .addEventListener("click", function() {
     if (!this.classList.contains("ignore")) {
       this.classList.toggle("ignore");
-      childElement.style.transform = `translate( ${
-        this.parentElement.childNodes[3].value
-      }%)`;
+      childElement.style.transform = `translate( ${this.parentElement.childNodes[3].value}%)`;
       this.parentElement.childNodes[3].classList.toggle("ignore");
       this.parentElement.childNodes[3].disabled = true;
     } else {
@@ -145,9 +143,7 @@ document
 document.querySelector(".scale button").addEventListener("click", function() {
   if (!this.classList.contains("ignore")) {
     this.classList.toggle("ignore");
-    childElement.style.transform = `scale( ${
-      this.parentElement.childNodes[3].value
-    })`;
+    childElement.style.transform = `scale( ${this.parentElement.childNodes[3].value})`;
     this.parentElement.childNodes[3].classList.toggle("ignore");
     this.parentElement.childNodes[3].disabled = true;
   } else {
@@ -163,9 +159,7 @@ document.querySelector(".scale button").addEventListener("click", function() {
 document.querySelector(".rotate button").addEventListener("click", function() {
   if (!this.classList.contains("ignore")) {
     this.classList.toggle("ignore");
-    childElement.style.transform = `rotate(${
-      this.parentElement.childNodes[3].value
-    }deg)`;
+    childElement.style.transform = `rotate(${this.parentElement.childNodes[3].value}deg)`;
     this.parentElement.childNodes[3].classList.toggle("ignore");
     this.parentElement.childNodes[3].disabled = true;
   } else {
@@ -181,9 +175,7 @@ document.querySelector(".rotate button").addEventListener("click", function() {
 document.querySelector(".skew button").addEventListener("click", function() {
   if (!this.classList.contains("ignore")) {
     this.classList.toggle("ignore");
-    childElement.style.transform = `skew(${
-      this.parentElement.childNodes[3].value
-    }deg)`;
+    childElement.style.transform = `skew(${this.parentElement.childNodes[3].value}deg)`;
     this.parentElement.childNodes[3].classList.toggle("ignore");
     this.parentElement.childNodes[3].disabled = true;
   } else {
@@ -214,7 +206,6 @@ document.querySelector(".zIndexThird").addEventListener("input", function() {
 /* overflow - start */
 
 document.querySelector(".overflowSelect").addEventListener("input", function() {
-  console.log(this.value);
   document.querySelector(".container").style.overflow = this.value;
 });
 

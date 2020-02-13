@@ -16,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .wrapper {
   font-family: arial, sans-serif;
   height: 100vh;
@@ -96,6 +97,7 @@ toolbar - start
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .active {
   display: flex;
   flex-wrap: wrap;
@@ -110,11 +112,9 @@ toolbar - start
   text-align: center;
   transition: 0.6s;
 
-  background-image: linear-gradient(
-    to right,
-    var(--darkerColor) 50%,
-    var(--lighterColorSpecial) 55%
-  );
+  background-image: linear-gradient(to right,
+      var(--darkerColor) 50%,
+      var(--lighterColorSpecial) 55%);
   background-position: bottom;
   background-size: 10px 2px;
   background-repeat: repeat-x;
@@ -151,11 +151,9 @@ toolbar - start
 
 .property {
   font-weight: bold;
-  background-image: linear-gradient(
-    to right,
-    var(--darkerColor) 0%,
-    var(--lighterColorSpecial) 110%
-  );
+  background-image: linear-gradient(to right,
+      var(--darkerColor) 0%,
+      var(--lighterColorSpecial) 110%);
   color: var(--subFont);
   padding: 0 2px;
 }
@@ -168,15 +166,16 @@ toolbar - start
   line-height: 1.3em;
 }
 
-.basic__content .definition:hover + .container,
-.basic__content .definition:hover + .item,
-.basic__content .definition:hover + .cell,
-.basic__content .definition:hover + .track,
-.basic__content .definition:hover + .area,
-.basic__content .definition:hover + .gap,
-.basic__content .definition:hover + .line {
+.basic__content .definition:hover+.container,
+.basic__content .definition:hover+.item,
+.basic__content .definition:hover+.cell,
+.basic__content .definition:hover+.track,
+.basic__content .definition:hover+.area,
+.basic__content .definition:hover+.gap,
+.basic__content .definition:hover+.line {
   opacity: 1;
 }
+
 /*definition popup - end*/
 
 /*info + popup - start*/
@@ -185,6 +184,7 @@ aside {
   height: 20px;
   width: 100%;
 }
+
 .info {
   width: 20px;
   height: 20px;
@@ -209,12 +209,14 @@ aside {
   opacity: 0;
   display: none;
 }
+
 .info__box h3,
 .info__box p {
   margin-top: 5px;
   text-align: center;
   color: var(--lighterColorSpecial);
 }
+
 .info__box h3 {
   margin-top: 10px;
 }
@@ -223,7 +225,7 @@ aside {
   display: block;
 }
 
-.info:hover + .info__box {
+.info:hover+.info__box {
   opacity: 1;
 }
 
@@ -234,12 +236,14 @@ label {
   width: 50%;
   text-align: center;
 }
+
 select {
   width: 30%;
   height: 30px;
   margin: 0 10px;
   text-align: center;
 }
+
 input {
   height: 30px;
   width: 160px;
@@ -270,6 +274,7 @@ input {
   width: 100%;
   margin-top: -20px;
 }
+
 .feature:nth-of-type(3) button {
   margin: 10px 70px -10px 70px;
 }
@@ -291,23 +296,24 @@ textarea {
   width: 130px;
   margin-top: -10px;
 }
+
 .feature:last-of-type button {
   margin-top: -10px;
 }
+
 .feature:last-of-type .read {
   width: 100%;
   text-align: center;
   margin: -10px 0;
   color: var(--mainFont);
 }
+
 .feature:last-of-type a {
   font-weight: bold;
-  background-image: linear-gradient(
-    to right,
-    var(--darkerColor) -10%,
-    var(--lighterColorSpecial) 60%,
-    var(--darkerColor) 110%
-  );
+  background-image: linear-gradient(to right,
+      var(--darkerColor) -10%,
+      var(--lighterColorSpecial) 60%,
+      var(--darkerColor) 110%);
   color: var(--subFont);
   padding: 0 4px;
 }
@@ -315,6 +321,7 @@ textarea {
 .feature:last-of-type .feature__content select {
   margin-top: -10px;
 }
+
 /* ======
 toolbar - end
 ========= */
@@ -332,12 +339,15 @@ child's size - start
   height: 100px;
   font-size: 0.7em;
 }
+
 .childsize label {
   color: black;
 }
+
 .childsize label:first-of-type {
   margin-right: 4px;
 }
+
 .childsize p {
   text-align: center;
   font-weight: bold;
@@ -358,6 +368,7 @@ footer {
   background-color: var(--lighterColor);
   color: var(--mainFont);
 }
+
 /* ==========
 footer end
 ========== */
@@ -373,13 +384,6 @@ visualization start
   display: grid;
 }
 
-/*to be deleted - start*/
-.visualization {
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  grid-auto-columns: 250px;
-} /*to be deleted - end*/
-
 .gitem {
   display: grid;
   border: 1px dashed black;
@@ -390,6 +394,7 @@ visualization start
   width: 50px;
   height: 50px;
 }
+
 /* ==========
 visualization end
 ========== */

@@ -39,7 +39,7 @@ const createGrid = function() {
     );
     gridPlace.style.gridTemplateColumns = gtColumns.value;
   } else {
-    console.log("co się dzieje gdy nie ma repeat w kolumnach??");
+    console.log("Please use repeat() value in order to create a container.");
   }
 
   /*check if there is reapeat used in rows*/
@@ -50,7 +50,7 @@ const createGrid = function() {
     );
     gridPlace.style.gridTemplateRows = gtRows.value;
   } else {
-    console.log("co się dzieje gdy nie ma repeat w wierszach??");
+    console.log("Please use repeat() value in order to create a container.");
   }
 
   let totCells = noCols * noRows;
@@ -70,9 +70,6 @@ const createGrid = function() {
     singleCell.innerHTML = '<div class="gelement"></div>';
     gridPlace.appendChild(singleCell);
   }
-
-  console.log(`liczba kolumn ${noCols}`);
-  console.log(`liczba wierszy ${noRows}`);
 };
 btns[0].addEventListener("click", createGrid);
 
@@ -124,11 +121,8 @@ const gaRow = document.querySelector("#gridAutoRows");
 const gaFlow = document.querySelector("#gridAutoFlow");
 const implicitGrid = function() {
   gridPlace.style.gridAutoColumns = gaCol.value;
-  console.log(gaCol.value);
   gridPlace.style.gridAutoRows = gaRow.value;
-  console.log(gaRow.value);
   gridPlace.style.gridAutoFlow = gaFlow.value;
-  console.log(gaFlow.value);
 };
 btns[5].addEventListener("click", implicitGrid);
 
