@@ -39,7 +39,11 @@ const createGrid = function() {
     );
     gridPlace.style.gridTemplateColumns = gtColumns.value;
   } else {
-    console.log("Please use repeat() value in order to create a container.");
+    gridPlace.style.gridTemplateColumns = gtColumns.value;
+    noCols = gtColumns.value.split(" ").length;
+    console.log(
+      "If container wasn't created please use repeat() value in order to create it or visit https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns to learn how to declare columns. If you are still facing the problem please contact me at piotrkaczmarek.dev@gmail.com"
+    );
   }
 
   /*check if there is reapeat used in rows*/
@@ -50,9 +54,12 @@ const createGrid = function() {
     );
     gridPlace.style.gridTemplateRows = gtRows.value;
   } else {
-    console.log("Please use repeat() value in order to create a container.");
+    gridPlace.style.gridTemplateRows = gtRows.value;
+    noRows = gtRows.value.split(" ").length;
+    console.log(
+      "If container wasn't created please use repeat() value in order to create it or visit https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns to learn how to declare rows. If you are still facing the problem please contact me at piotrkaczmarek.dev@gmail.com"
+    );
   }
-
   let totCells = noCols * noRows;
 
   /*remove all existing elements in the container*/
